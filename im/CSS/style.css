@@ -1,0 +1,225 @@
+@charset "utf-8";
+/* 공통 스타일 */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+/* 모바일 기준 */
+#container{width: 100%;}
+
+/* header 영역 */
+header{height: 320px;}
+header nav{height: 60px; background-color: black;}
+nav #main-nav{text-align: center;}
+nav #main-nav li{
+  display: inline-block; 
+  line-height: 60px;
+  margin: 0 30px;}
+#main-nav li a{color: white; text-decoration: none;}
+#main-nav li a:hover{color: orange; text-decoration: none;}
+header #main-pic img{width: 100%; height: 260px;}
+
+/* section 영역 */
+section{height: 320px; padding: 10px 5%;}
+section:nth-of-type(2n){background-color: #eee;}
+section .page-title{margin: 20px 0;}
+section p{line-height: 3;}
+section .content .photo{display: none;}
+#choice .content h2{margin-bottom: 20px;  color:pink;}
+#choice .content ol {padding-left: 30px;}
+#choice .content ol li{line-height: 2;}
+
+/* footer 영역 */
+footer{height:  80px; border-top: 2px solid #222;}
+#bottom-menu{list-style: none; margin: 10px 40px;}
+#bottom-menu li{display: inline-block;
+                margin: 10px 0; 
+                padding: 0 10px;
+                border-right: 1px solid #ccc;}
+#bottom-menu li:last-child{border: none;} /* 사이트맵 옆의 바(|) 숨기기 */
+#bottom-menu li a{text-decoration: none; color:#444;}
+
+/* 테블릿 기준 : 780px 이상 */
+@media screen and (min-width: 780px) {
+  /* header 영역 */
+  header{height: 350px;}
+  header #main-pic img{height: 250px;}
+  nav #main-nav li{margin: 0 40px;}
+
+  /* section 영역 */
+  section{width: 100%; height: 380px;}
+  #intro {float: left; width: 50%;}
+  #choice{float:right; width: 50%;}
+  #map{clear: both;}
+  #map .photo{float: left; display: inline-block;  margin-right: 40px;}
+}
+
+/* pc 기준 : 1200px 이상 */
+@media screen and (min-width: 1200px){
+  #container{width: 1200px; margin: 0 auto;}
+   /* header 영역 */
+   header{height: 380px;}
+   nav #main-nav li{margin: 0 50px;}
+   header #main-pic img{height: 320px;}
+
+   /* section 영역 */
+   section{width: 100%; height: 350px;}
+   #intro, #choice, #map{width: 100%;}
+   section .content .photo {display: block;}
+   #intro .photo, #map .photo{float: left; margin-right: 20px;}
+   #choice .photo{float: right;}
+   #choice .content ol li{line-height: 2;}
+
+
+}
+/* about섹션 */
+.txt-about h2{
+  color: #6a75ca;
+  text-align: center;
+  font-size: 40px;
+}
+.section-about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 80px 0 140px 0;
+  margin: 140px 0 140px 0;
+}
+
+.cont-about {
+  display: flex;
+  margin: 0 auto;
+}
+.slide-container {
+  width: 438px;
+  margin: 0 auto;
+}
+.slide-album {
+  position: relative;
+  width: 438px;
+  height: 438px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.slide-images {
+  position: relative;
+  display: flex;
+  height: 438px;
+  margin: 0 auto ;
+}
+.slide-images img {
+  width: 438px;
+  height: 438px;
+}
+.btn-next,
+.btn-next:active,
+.btn-next:focus {
+  position: absolute;
+  padding: 8px 8px 7px 14px;
+  background-color: #6a75ca;
+  color: white;
+  border: none;
+  font-size: 18px;
+  border-radius: 100%;
+}
+.btn-prev,
+.btn-prev:active,
+.btn-prev:focus {
+  position: absolute;
+  padding: 8px 14px 7px 8px;
+  background-color: #6a75ca;
+  color: white;
+  border: none;
+  font-size: 20px;
+  border-radius: 100%;
+}
+.btn-next:disabled,
+.btn-prev:disabled {
+  background-color: lightgray;
+}
+.btn-next:hover,
+.btn-prev:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #6a75ca;
+  transition: 0.7s ease-out;
+}
+.btn-prev {
+  left: 18px;
+  top: 50%;
+}
+.btn-next {
+  right: 18px;
+  top: 50%;
+}
+.info-about {
+  margin: 0 0 0 60px;
+}
+.txt-about dt {
+  display: inline-block;
+  margin-bottom: 17px;
+  width: 110px;
+  font-size: 22px;
+  font-family: "GmarketBold";
+  color: #6a75ca;
+}
+.txt-about {
+  margin-top: 55px;
+}
+.txt-about dd {
+  display: inline-block;
+  font-size: 22px;
+}
+.btn-about {
+  margin: 45px 0 0 20px;
+}
+.btn-about button {
+  width: 140px;
+  height: 140px;
+  margin: 0 45px 0 0;
+  border-radius: 100%;
+  background-color: #6a75ca;
+  border: none;
+  color: white;
+  font-size: 18px;
+}
+.btn-about button:hover {
+  cursor: pointer;
+  background-color: #c4c8f1;
+  color: #868ecf;
+  /* border: 2px solid #6a75ca; */
+  transition: 0.5s ease-out;
+}
+.btn-about button img {
+  width: 43px;
+  margin: 10px auto;
+}
+/* 학력 */
+.page-title{
+  color: #6a75ca;
+}
+
+.box-footer {
+  width: 100%;
+  background-color: white;
+  padding: 80px 0 70px 0;
+}
+.link-sns ul {
+  display: inline-block;
+  margin: 30px auto;
+}
+.link-sns li {
+  display: inline-block;
+  padding: 35px;
+  font-size: 12px;
+}
+.link-sns li a img {
+  margin-bottom: 10px;
+}
+.img-github,
+.img-velog {
+  width: 65px;
+}
+.box-footer p {
+  color: #6a75ca;
+  margin-top: 50px;
+}
